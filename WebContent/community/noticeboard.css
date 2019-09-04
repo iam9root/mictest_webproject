@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MIC TEST CSS부분 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+#main {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.text {
+  background: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
+  background-size: contain;
+  background-position: top left;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+body {
+  background: black;
+  margin: 0;
+}
+
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 메뉴 CSS부분 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+a{text-align:center}
+
+body{
+	font-family:Tahoma,Geneva,sans-serif;
+	font-weight:400
+	}
+
+ol{margin:0;padding:0;list-style-type:none}
+
+.menu{
+	
+	width:100%;
+	padding:0 16px;
+	display:block;
+	position:relative;
+	top:10px
+	}
+
+.menu > ol:first-child{
+	width:100%;
+	display:flex;
+	position:relative;
+	flex-flow:row wrap;
+	justify-content:center
+	}
+
+.menu-item{
+	width:150px;
+	position:relative;
+	perspective:100%;
+	cursor:pointer
+	}
+
+
+/* 상위메뉴들 글씨 */
+.menu-item a{
+	width:100%;
+	padding:16px 0;
+	display:block;
+	position:relative;
+	color:#fff;
+	border-radius:4px;
+	transition:all .5s ease;
+	transform-style:preserve-3d
+	}
+
+.menu > ol:first-child > .menu-item{display:block}
+
+/* 메뉴 바로 아래 밑줄같은 둥그런거 */
+.menu > ol:first-child > .menu-item > a
+	{background:#000;box-shadow:0 8px 6px -6px #595959}
+
+/* 메뉴들 사이사이 흰색선이 있었음 없앰 */
+
+
+/*메뉴에 마우스 대면 생기는 메뉴와 하위메뉴 사이 css*/
+.sub-menu{
+	background:#000;
+	width:100%;
+	top:51px;
+	display:none;
+	position:absolute;
+	z-index:99;
+	border-top:#000
+	}
+
+
+/*하위메뉴 뒷배경?*/
+@keyframes fadein-down{
+	from{display:none;opacity:0;transform:translateY(-10px)}
+	to{display:block;opacity:1;transform:translateY(0)}
+	}
+
+.sub-menu > .menu-item > a{background:#000000}
+
+/*하위 메뉴들 css 하위메뉴들 사이의 흰색선 없앰*/
+.sub-menu > .menu-item:nth-of-type(2) > a
+	{border-top: #fff;border-bottom: #fff}
+
+
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(1)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(2)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(3)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:hover 
+
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(1) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(2) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(3) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:hover > a{transform:rotateY(-90deg)}
+
+.menu > ol:first-child > .menu-item:hover > .sub-menu{display:block}
+
+
+/*@@@@@@@@@@@@@@@  공지게시판   @@@@@@@@@@@@@@@@@@@@@*/
+.noticeboard {
+	border:0;
+	max-width: 1000px;
+	width:100%;
+	margin:0;
+	padding: 30px 40px 50px 40px;
+	margin:auto;
+	display:table;
+	
+}
+.noticeboard caption { /* 게시판리스트 라는 캡션 이름 숨기기 */
+	display: none;
+}
+.noticeboard th {
+	border-top:solid 2px white;
+	border-bottom: solid 2px white;
+	background-color:#383838;
+	color:#999;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.noticeboard .title { /* 제목은 중앙정렬 하지 않고 왼쪽정렬 */
+	text-align: left;
+	padding-left:15px;
+}
+.noticeboard tbody {
+	text-align:center;
+	color:white;
+}
+.noticeboard td { /* 아래 보더 */
+	border-bottom : solid 1px white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.noticeboard #pageForm {
+	color:white;
+}
+.noticeboard .title a {
+	text-decoration: none;
+	color: white;
+}
+
+
+/*@@@@@@@@@@@@@@@  공지사항 게시판 글쓰기   @@@@@@@@@@@@@@@@@@@@@*/
+.noticewrite_wrap {
+	border:0;
+	max-width: 700px;
+	width:100%;
+	margin:0;
+	padding: 30px 40px 50px 40px;
+	margin:auto;
+	display:table;
+	color: white;
+}
+.noticewrite_wrap caption { /* 게시판리스트 라는 캡션 이름 숨기기 */
+	display: none;
+}
+.noticewrite_wrap table {
+	width:1000px;
+	border:3px;
+	border-color: lightgray;
+	align:center;
+	align-items: cetner;
+	
+}
+.noticewrite_wrap #title {
+	font-weight: bold;
+	font-size:larger;	
+}

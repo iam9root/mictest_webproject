@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MIC TEST CSS부분 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+#main {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.text {
+  background: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
+  background-size: contain;
+  background-position: top left;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+body {
+  background: black;
+  margin: 0;
+}
+
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 메뉴 CSS부분 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+a{text-align:center}
+
+body{
+	font-family:Tahoma,Geneva,sans-serif;
+	font-weight:400
+	}
+
+ol{margin:0;padding:0;list-style-type:none}
+
+.menu{
+	
+	width:100%;
+	padding:0 16px;
+	display:block;
+	position:relative;
+	top:10px
+	}
+
+.menu > ol:first-child{
+	width:100%;
+	display:flex;
+	position:relative;
+	flex-flow:row wrap;
+	justify-content:center
+	}
+
+.menu-item{
+	width:150px;
+	position:relative;
+	perspective:100%;
+	cursor:pointer
+	}
+
+
+/* 상위메뉴들 글씨 */
+.menu-item a{
+	width:100%;
+	padding:16px 0;
+	display:block;
+	position:relative;
+	color:#fff;
+	border-radius:4px;
+	transition:all .5s ease;
+	transform-style:preserve-3d
+	}
+
+.menu > ol:first-child > .menu-item{display:block}
+
+/* 메뉴 바로 아래 밑줄같은 둥그런거 */
+.menu > ol:first-child > .menu-item > a
+	{background:#000;box-shadow:0 8px 6px -6px #595959}
+
+/* 메뉴들 사이사이 흰색선이 있었음 없앰 */
+
+
+/*메뉴에 마우스 대면 생기는 메뉴와 하위메뉴 사이 css*/
+.sub-menu{
+	background:#000;
+	width:100%;
+	top:51px;
+	display:none;
+	position:absolute;
+	z-index:99;
+	border-top:#000
+	}
+
+
+/*하위메뉴 뒷배경?*/
+@keyframes fadein-down{
+	from{display:none;opacity:0;transform:translateY(-10px)}
+	to{display:block;opacity:1;transform:translateY(0)}
+	}
+
+.sub-menu > .menu-item > a{background:#000000}
+
+/*하위 메뉴들 css 하위메뉴들 사이의 흰색선 없앰*/
+.sub-menu > .menu-item:nth-of-type(2) > a
+	{border-top: #fff;border-bottom: #fff}
+
+
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(1)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(2)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(3)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:hover 
+
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(1) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(2) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(3) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:hover > a{transform:rotateY(-90deg)}
+
+.menu > ol:first-child > .menu-item:hover > .sub-menu{display:block}
+
+
+/*@@@@@@@@@@@@@@ 제목 @@@@@@@@@@@@@@@@@@@*/
+.title{
+	color:#fff;
+	text-align:center;
+	position: relative;
+	top: 50px
+}
+
+
+/*@@@@@@@@@@@@@@@  golden mic   @@@@@@@@@@@@@@@@@@@@@*/
+.album{
+	max-width: 1000px;
+	width:100%;
+	margin:auto;
+	display:table;
+	text-align:center;	
+}
+
+.album-item{
+	position: relative;
+	top:100px;
+	border-radius:50%;
+	width:300px;
+	height:300px;
+	background-color:#fff;
+	display:inline-block;
+	overflow:hidden;
+	align-items:center;
+	font-size:2em;
+
+}
+
+.album-audio{
+	z-index: 10;
+}
+#first{
+	margin-bottom: 30px;
+}
+#second{
+	margin-top: 30px;
+	margin-right:40px;
+}
+#third{
+	margin-top: 30px;
+	margin-left:40px;
+}

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ listenmusic @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.category{
+	margin-top: 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+}
+
+.firstsection{
+	width: 1000px;
+	height: 300px;
+	border: solid 2px #fff;
+	margin-top: 150px;
+	margin: 0;
+	color: #fff;
+	font-size: 20px;
+	margin:auto;
+	
+}
+
+.fdiv{
+	margin: auto;
+}
+
+.audio{
+	text-align: center;
+}
+
+.info{	
+	text-align: center;
+}
+
+.bottom{
+	text-align: center;
+}
+
+.secondsection{
+	width: 1000px;
+	height: 300px;
+	margin-top: 50px;	
+	margin: auto;	
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+}
+
+table{
+	font-size: 20px;
+	text-align: left;
+}
+
+.writer{
+	font-weight: bold;
+}
+
+img{
+	width: 50px;
+	height: 50px;
+}
+
+.allreply{
+	margin-top: 50px;
+	margin-left: 50px;
+}

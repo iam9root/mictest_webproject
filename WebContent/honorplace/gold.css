@@ -1,0 +1,431 @@
+@charset "UTF-8";
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ MIC TEST CSS부분 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+#main {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.text {
+  background: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
+  background-size: contain;
+  background-position: top left;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+body {
+  background: black;
+  margin: 0;
+}
+
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 메뉴 CSS부분 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+a{text-align:center}
+
+body{
+	font-family:Tahoma,Geneva,sans-serif;
+	font-weight:400
+	}
+
+ol{margin:0;padding:0;list-style-type:none}
+
+.menu{
+	
+	width:100%;
+	padding:0 16px;
+	display:block;
+	position:relative;
+	top:10px
+	}
+
+.menu > ol:first-child{
+	width:100%;
+	display:flex;
+	position:relative;
+	flex-flow:row wrap;
+	justify-content:center
+	}
+
+.menu-item{
+	width:150px;
+	position:relative;
+	perspective:100%;
+	cursor:pointer
+	}
+
+
+/* 상위메뉴들 글씨 */
+.menu-item a{
+	width:100%;
+	padding:16px 0;
+	display:block;
+	position:relative;
+	color:#fff;
+	border-radius:4px;
+	transition:all .5s ease;
+	transform-style:preserve-3d
+	}
+
+.menu > ol:first-child > .menu-item{display:block}
+
+/* 메뉴 바로 아래 밑줄같은 둥그런거 */
+.menu > ol:first-child > .menu-item > a
+	{background:#000;box-shadow:0 8px 6px -6px #595959}
+
+/* 메뉴들 사이사이 흰색선이 있었음 없앰 */
+
+
+/*메뉴에 마우스 대면 생기는 메뉴와 하위메뉴 사이 css*/
+.sub-menu{
+	background:#000;
+	width:100%;
+	top:51px;
+	display:none;
+	position:absolute;
+	z-index:99;
+	border-top:#000
+	}
+
+
+/*하위메뉴 뒷배경?*/
+@keyframes fadein-down{
+	from{display:none;opacity:0;transform:translateY(-10px)}
+	to{display:block;opacity:1;transform:translateY(0)}
+	}
+
+.sub-menu > .menu-item > a{background:#000000}
+
+/*하위 메뉴들 css 하위메뉴들 사이의 흰색선 없앰*/
+.sub-menu > .menu-item:nth-of-type(2) > a
+	{border-top: #fff;border-bottom: #fff}
+
+
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(1)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(2)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:nth-of-type(3)
+.menu > ol:first-child > .menu-item:nth-of-type(3) > .sub-menu > .menu-item:hover 
+
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(1) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(2) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:nth-of-type(3) 
+.menu > ol:first-child > .menu-item:nth-of-type(4) > .sub-menu > .menu-item:hover > a{transform:rotateY(-90deg)}
+
+.menu > ol:first-child > .menu-item:hover > .sub-menu{display:block}
+
+
+/*@@@@@@@@@@@@@@ 제목 @@@@@@@@@@@@@@@@@@@*/
+.title{
+	color:#fff;
+	text-align:center;
+	position: relative;
+	top: 50px
+}
+
+
+/*@@@@@@@@@@@@@@@  golden mic   @@@@@@@@@@@@@@@@@@@@@*/
+.album{
+	position : relative;
+	top : 150px;
+	max-width:1000px;
+	width:100%;
+	margin:auto;
+	display:table;
+/* 	max-width: 1000px;
+	width:100%;
+	margin:auto;
+	display:table;
+	text-align:center; */	
+}
+
+/*@@@@@@@@@@@@회전 마이크@@@@@@@@@@@@@@@*/
+
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Lora:700");
+*, *:after, *:before {
+  box-sizing: border-box;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.wrapper {
+  min-width: 100%;
+  min-height: 40vh;
+  float:left;
+  display: flex;
+  padding-left:40px;
+  /* align-items: center;
+  justify-content: center; */
+  background: linear-gradient(-45deg, #000, #000);
+  font-family: Lora, serif;
+  overflow: hidden;
+}
+
+.hummingbird {
+  margin-top: 50px;
+  width: 250px;
+  height: 250px;
+  -webkit-perspective: 60rem;
+          perspective: 60rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .hummingbird {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+.hummingbird .body {
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-animation: rotate 15s linear infinite;
+          animation: rotate 15s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateY(1080deg);
+            transform: rotateY(1080deg);
+  }
+}
+.hummingbird .body:before, .hummingbird .body:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  background: linear-gradient(to bottom, #ffd700, #ffd700, transparent);
+}
+.hummingbird .body:before {
+  -webkit-transform: rotateZ(30deg) rotateY(30deg);
+          transform: rotateZ(30deg) rotateY(30deg);
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%);
+          clip-path: polygon(0 0, 100% 10%, 100% 100%);
+}
+.hummingbird .body:after {
+  -webkit-transform: rotateZ(30deg) rotateY(-30deg);
+          transform: rotateZ(30deg) rotateY(-30deg);
+  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%);
+          clip-path: polygon(0 0, 100% 10%, 100% 100%);
+}
+.hummingbird .body .back {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, #ffd700, #ffd700, transparent);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
+  -webkit-transform: rotateY(90deg) rotateX(-13deg) translateZ(55px) translateY(-45px);
+          transform: rotateY(90deg) rotateX(-13deg) translateZ(55px) translateY(-45px);
+}
+
+@-webkit-keyframes beating-left {
+  0% {
+    -webkit-transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(180deg);
+            transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(180deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+  }
+}
+@keyframes beating-left {
+  0% {
+    -webkit-transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(180deg);
+            transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(180deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(-10deg) translateZ(30px) rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes beating-right {
+  0% {
+    -webkit-transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(-180deg);
+            transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+  }
+}
+@keyframes beating-right {
+  0% {
+    -webkit-transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(-180deg);
+            transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+            transform: rotateZ(-75deg) rotateY(10deg) translateZ(-30px) rotateX(0deg);
+  }
+}
+.hummingbird .body .head:before, .hummingbird .body .head:after{
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 55%;
+  top: -45px;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  background: linear-gradient(to bottom, #ffd700, transparent);
+}
+/*@@@@@@@@ 윗부분 완성시키려다 현재 실패 @@@@@@@*/
+/* .hummingbird .body .head .nape:after{
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 55%;
+  top: -75px;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  background: linear-gradient(to bottom, #ffd700, transparent);
+ -webkit-transform: rotateZ(40deg) rotateY(0deg);
+          transform: rotateZ(40deg) rotateY(0deg);
+ -webkit-clip-path: circle(50% at 50% 50%);
+             clip-path: circle(50% at 50% 50%);
+} */
+.hummingbird .body .head:before {
+  -webkit-transform: rotateZ(0deg) rotateY(40deg);
+          transform: rotateZ(0deg) rotateY(40deg);
+ -webkit-clip-path: circle(50% at 50% 50%);
+             clip-path: circle(50% at 50% 50%);
+  /* -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%); */
+}
+.hummingbird .body .head:after {
+  -webkit-transform: rotateZ(0deg) rotateY(-40deg);
+          transform: rotateZ(0deg) rotateY(-40deg);
+ -webkit-clip-path: circle(50% at 50% 50%);
+             clip-path: circle(50% at 50% 50%);
+ /*  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%);
+          clip-path: polygon(0 20%, 100% 0, 100% 100%); */
+}
+/* .hummingbird .body .head .nape:after{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 35px;
+  position: absolute;
+  top: 0%;
+  background: linear-gradient(to bottom, rgba(119, 238, 180, 0.8), rgba(83, 169, 197, 0.8), transparent);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+
+  -webkit-transform: rotateY(90deg) rotateX(-73deg) translateZ(-37px) translateY(-110px);
+          transform: rotateY(90deg) rotateX(-73deg) translateZ(-37px) translateY(-110px); 
+} */
+
+/* .hummingbird .body .head .beak:before {
+  -webkit-transform: rotateZ(-105deg) rotateY(25deg);
+          transform: rotateZ(-105deg) rotateY(25deg);
+  -webkit-clip-path: polygon(0 0, 100% 1%, 100% 100%);
+          clip-path: polygon(0 0, 100% 1%, 100% 100%);
+}
+.hummingbird .body .head .beak:after{
+  -webkit-transform: rotateZ(-105deg) rotateY(-25deg);
+          transform: rotateZ(-105deg) rotateY(-25deg);
+  -webkit-clip-path: polygon(0 0, 100% 1%, 100% 100%);
+          clip-path: polygon(0 0, 100% 1%, 100% 100%);
+} */
+.hummingbird .platform {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  -webkit-transform: rotateX(90deg) translateZ(-100px);
+          transform: rotateX(90deg) translateZ(-100px);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px dashed #ffd700;
+  box-shadow: 0 0 50px 0px #ffd700;
+  font-weight: bold;
+}
+
+.title2 {
+  color: #FFF;
+  position: relative;
+  top:100px;
+  text-align:center;
+  font-size: 2.8rem;
+  bottom: 100%;
+  pointer-events: none;
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@ 골든마이크 글부분@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.micking_title{
+	position: relative;
+	top: 70px;
+	text-align:center;
+	color: #fff;
+}
+.micking{
+	margin-left: 160px;
+	color: #fff;
+	position:relative;
+	
+}
